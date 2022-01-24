@@ -12,7 +12,7 @@ const lossesEl = document.getElementById('losses');
 const totalEl = document.getElementById('total');
 
 // initialize state
-const hidingPlaces = ['tree', 'shed', 'boulder'];
+const hidingPlaces = ['tree', 'boulder', 'shed'];
 
 let correctGuesses = 0;
 let totalGuesses = 0;
@@ -41,7 +41,7 @@ function handleGuess(userGuess, correctSpot) {
     boulderContainer.classList.remove('face');
     shedContainer.classList.remove('face');
     // then increment the guesses
-
+    totalGuesses++;
     // then grab the appropriate container element for the correct guess from the DOM
     // then add the face class to that element so that the face shows up
     // then if the user guess is correct, increment the correct guesses
